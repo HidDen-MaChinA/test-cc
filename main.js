@@ -10,7 +10,7 @@ export class RiceCooker {
         this.delaySync = (ms) => {
             const start = Date.now()
             while(Date.now() - start < ms) {
-
+                
             }
         }
         this.cookRice = () => {
