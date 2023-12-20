@@ -8,7 +8,8 @@ this.addRice = () => {
 }
 ~~~
 
-the addRice method is just a function change the value of a variable in fact there are just statement inside the function the complexity is constant / O(1).
+the addRice method is just a function change the value of a variable in fact there 
+are just statement inside the function the complexity is constant / O(1).
 
 #### Source code
 ~~~
@@ -38,7 +39,10 @@ this.delaySync = (ms) => {
     }
 }
 
-The delaySync method takes on a parameter "ms" and it's fonction is to delay the execution of the program by the parameter ms in milliseconds, so in this method "Date.now() - start < ms" will be executed n time, I'll assume Date.now() complexity is O(1) so it's just that we will execute some constant statements, n time, so the complexity is linear O(n).
+The delaySync method takes on a parameter "ms" and it's fonction is to delay the execution
+of the program by the parameter ms in milliseconds, so in this method "Date.now() - start < ms"
+will be executed n time, I'll assume Date.now() complexity is O(1) so it's just that we will
+execute some constant statements, n time, so the complexity is linear O(n).
 ~~~
 #### Source Code
 ~~~
@@ -48,10 +52,14 @@ delaySync(ms) {
     }
 },
 ~~~
-this is the same code, there is no point for a refactor for this because the goal of the function is to stop the execution of the application, so the complexity is linear O(n) as well
+this is the same code, there is no point for a refactor for this because the goal of
+the function is to stop the execution of the application, so the complexity is linear
+O(n) as well
 
 #### What changed
-nothing really changed because the purpose of this function is to freeze the user input, since it could have used asyncronous function in order for the programme to not be stopped when backend process where running
+nothing really changed because the purpose of this function is to freeze the user input,
+since it could have used asyncronous function in order for the programme to not be stopped
+when backend process where running
 # ```cookRice()``` 
 
 #### My code
@@ -74,7 +82,12 @@ this.cookRice = () => {
     }
 }
 
-the cookRice method is is a methode that cook the Rice, it just update the ricePresent variable, the two first block of if and else if are just some console.log so there complexity is O(1) not the case of the last block that execute the delaySync function witch have a complexity of O(n), but, in fact we put 1500 as parameter for delaySync in purpose, the value of ms in delaySync(ms) is static, then the complexity become constatn o the complexity of delaySync here is O(1), the complexity of this method is then constant O(1)
+the cookRice method is is a methode that cook the Rice, it just update the ricePresent variable,
+the two first block of if and else if are just some console.log so there complexity is O(1) not
+the case of the last block that execute the delaySync function witch have a complexity of O(n),
+ but, in fact we put 1500 as parameter for delaySync in purpose, the value of ms in delaySync(ms)
+is static, then the complexity become constatn o the complexity of delaySync here is O(1), the
+complexity of this method is then constant O(1)
 
 ~~~
 #### Source code
@@ -92,9 +105,12 @@ cookRice() {
     }
 },
 ~~~
-the complexity here is the same as my code, but the difference is the position of the condition block in the code, the complexity is constant O(1)
+the complexity here is the same as my code, but the difference is the position of the condition
+block in the code, the complexity is constant O(1)
 #### What changed
-I changed the placement of the block of code in order to remove some statement that could have been avoided, if you ask if there are no rice first, you don't have to ask it later because yes, you already know there are no rice
+I changed the placement of the block of code in order to remove some statement that could have
+been avoided, if you ask if there are no rice first, you don't have to ask it later because yes,
+you already know there are no rice
 # ```steam()```
 
 #### My code
@@ -115,7 +131,10 @@ this.steam = () => {
     }
 }
 
-the steam function is a function made to steam things in the rice cooker, like the precedent one, all of those block are just if else that run some console.log, all of them but it's not the fact of the last else block, that invoke the delaySync function, but like the precedent one, ms is 1500, so this as no effect one the compexity, the complexity is then O(1)
+the steam function is a function made to steam things in the rice cooker, like the precedent one,
+all of those block are just if else that run some console.log, all of them but it's not the fact
+of the last else block, that invoke the delaySync function, but like the precedent one, ms is 1500,
+so this as no effect one the compexity, the complexity is then O(1)
 ~~~
 #### Source code
 ~~~
@@ -135,7 +154,9 @@ steam() {
 same things here, the complexity is the same still O(1)
 ~~~
 #### What changed
-I changed the placement of the block of code in order to remove some statement that could have been avoided, if you ask if there are no rice first, you don't have to ask it later because yes, you already know there are no rice
+I changed the placement of the block of code in order to remove some statement that could
+have been avoided, if you ask if there are no rice first, you don't have to ask it later
+because yes, you already know there are no rice
 # ```keepWarm()``` :
 #### My code
 ~~~
@@ -154,7 +175,8 @@ this.keepWarm = () => {
   }
 }
 ~~~
-the keepWarm method is to keep your food warm, like the method name, anyway it just change the value of the heatingInProgress variable, so the complexity is just constant O(1)
+the keepWarm method is to keep your food warm, like the method name, anyway it just change the
+value of the heatingInProgress variable, so the complexity is just constant O(1)
 #### Source code
 ~~~
 keepWarm() {
@@ -172,7 +194,10 @@ if (this.ricePresent && this.riceCooked && !this.heatingInProgress) {
 ~~~
 just like my code, the complexity is O(1)
 #### What changed
-I changed the placement of the block of code in order to remove some statement that could have been avoided, if you ask if there are no rice first, you don't have to ask it later because yes, you already know there are no rice, and and now I'm asking if the rice is Cooked more earlier in the block of code, if order to avoid to ask it again later
+I changed the placement of the block of code in order to remove some statement that could have
+been avoided, if you ask if there are no rice first, you don't have to ask it later because yes,
+you already know there are no rice, and and now I'm asking if the rice is Cooked more earlier
+in the block of code, if order to avoid to ask it again later
 
 # ```removeRice()``` 
 #### My code
@@ -191,7 +216,9 @@ this.removeRice = () => {
     console.log("oke bro")
   }
 }
-the removeRice method is to remove the rice in the rice-cooker, the method don't do that much things in term of complexity, it just console.log something, and set some variable value, the complexity is constant O(1)
+the removeRice method is to remove the rice in the rice-cooker, the method don't do that much
+things in term of complexity, it just console.log something, and set some variable value, the
+complexity is constant O(1)
 ~~~
 #### Source code
 ~~~
@@ -209,4 +236,6 @@ the removeRice method is to remove the rice in the rice-cooker, the method don't
 ~~~
 same things here, don't do much of thing, it's constant O(1)
 #### What changed
-I changed the placement of the block of code in order to remove some statement that could have been avoided, if you ask if there are no rice first, you don't have to ask it later because yes, you already know there are no rice
+I changed the placement of the block of code in order to remove some statement that could have
+been avoided, if you ask if there are no rice first, you don't have to ask it later because yes,
+you already know there are no rice
