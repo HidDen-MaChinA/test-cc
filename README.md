@@ -1,8 +1,4 @@
 # <center>Complexity analysis<center>
-## Introduction
-### The Big-O notation
-    used o classify algo by theire worst running possible time
-
 # ```addRice()``` :
 
 #### My code
@@ -27,7 +23,7 @@ addRice() {
 ~~~
 same things here, the addRice Function just change the value of a variable so the complexity is constant O(1)
 #### What changed
-in fact I didn't see much things to change, I only refactor it to match in online, and now it's unreadable.
+in fact I didn't see much things to change, I only refactor it to match in one line, and now it's unreadable.
 
 # ```delaySync(ms)``` 
 #### My code
